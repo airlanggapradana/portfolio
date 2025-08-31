@@ -1,9 +1,16 @@
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
 import TextType from "@/components/reactbits/TextType/TextType.tsx";
+import {InteractiveHoverButton} from "@/components/magicui/interactive-hover-button";
 
 const Hero = () => {
   return (
     <div className={'w-full h-screen flex items-center justify-center'}>
+      <div className="absolute top-12 right-12 z-10">
+        <InteractiveHoverButton
+        >
+          Contact
+        </InteractiveHoverButton>
+      </div>
       <div className={'w-full'}>
         <div className={'max-w-8xl mx-auto'}>
           <BlurText
