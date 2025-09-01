@@ -37,7 +37,7 @@ const contactItems: ContactItem[] = [
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-28 px-6 w-full">
+    <section id={'contacts'} className="py-28 px-6 w-full">
       <div className="max-w-full mx-auto">
         <div className="mb-16 flex flex-col items-start w-full">
           <SplitText

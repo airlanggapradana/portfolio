@@ -1,12 +1,18 @@
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
-import TextType from "@/components/reactbits/TextType/TextType.tsx";
 import {InteractiveHoverButton} from "@/components/magicui/interactive-hover-button";
+import SplitText from "@/components/reactbits/SplitText/SplitText.tsx";
 
 const Hero = () => {
   return (
     <section id={'home'} className={'w-full h-screen flex items-center justify-center'}>
       <div className="absolute top-12 right-12 z-10">
         <InteractiveHoverButton
+          onClick={() => {
+            const section = document.getElementById('contacts');
+            if (section) {
+              section.scrollIntoView({behavior: 'smooth'});
+            }
+          }}
         >
           Contact
         </InteractiveHoverButton>
@@ -20,14 +26,18 @@ const Hero = () => {
             direction="bottom"
             className={'text-4xl sm:text-5xl max-w-5xl leading-tight md:text-8xl font-main font-medium mb-4'}
           />
-          <TextType
-            text={["Hello! I am Airlangga Pradana, known as Rangga, a self-learner and a fullstack developer — Crafting seamless digital experiences that empower brands to connect, engage, and grow in a dynamic world."]}
-            typingSpeed={30}
-            pauseDuration={1500}
-            showCursor={true}
-            textColors={['#4B5563']}
-            cursorCharacter="|"
-            className={'text-lg max-w-3xl sm:text-xl md:text-2xl text-gray-600 font-secondary'}
+          <SplitText
+            text="Hello! I am Airlangga Pradana, known as Rangga, a self-learner and a fullstack developer — Crafting seamless digital experiences that empower brands to connect, engage, and grow in a dynamic world."
+            className={'text-lg max-w-4xl sm:text-xl md:text-2xl text-gray-600 font-secondary'}
+            delay={100}
+            duration={1}
+            ease="power3.out"
+            splitType="words"
+            from={{opacity: 0, y: 20}}
+            to={{opacity: 1, y: 0}}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="initial"
           />
         </div>
       </div>

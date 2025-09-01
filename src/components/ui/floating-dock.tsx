@@ -8,8 +8,8 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-
 import {useRef, useState} from "react";
+import {useLenis} from "lenis/react";
 
 export const FloatingDock = ({
                                items,
@@ -36,13 +36,25 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const lenis = useLenis();
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("fixed bottom-4 right-4 z-50 block md:hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="absolute right-0 bottom-full mb-2 flex flex-col gap-2"
+            initial={{opacity: 0, y: 20}}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {type: "spring", stiffness: 300, damping: 24}
+            }}
+            exit={{
+              opacity: 0,
+              y: 20,
+              transition: {type: "spring", stiffness: 300, damping: 24, duration: 0.2}
+            }}
           >
             {items.map((item, idx) => (
               <motion.div
@@ -51,19 +63,21 @@ const FloatingDockMobile = ({
                 animate={{
                   opacity: 1,
                   y: 0,
+                  transition: {delay: idx * 0.05, type: "spring", stiffness: 300, damping: 24}
                 }}
                 exit={{
                   opacity: 0,
                   y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
+                  transition: {delay: idx * 0.03, type: "spring", stiffness: 300, damping: 24, duration: 0.15}
                 }}
-                transition={{delay: (items.length - 1 - idx) * 0.05}}
               >
                 <a
                   href={item.href}
-                  key={item.title}
+                  onClick={() => {
+                    if (lenis) {
+                      lenis.scrollTo(item.href);
+                    }
+                  }}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -73,12 +87,14 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
-      <button
+      <motion.button
         onClick={() => setOpen(!open)}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        animate={{rotate: open ? 90 : 0}}
+        transition={{type: "spring", stiffness: 300, damping: 20}}
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400"/>
-      </button>
+      </motion.button>
     </div>
   );
 };
