@@ -1,5 +1,7 @@
 import {FloatingDock} from "@/components/ui/floating-dock.tsx";
-import {IconBrandGithub, IconBrandX, IconExchange, IconHome, IconNewSection, IconTerminal2} from "@tabler/icons-react";
+import {IconBrandGithub, IconHome} from "@tabler/icons-react";
+import {MdOutlinePeopleOutline, MdOutlineWorkHistory} from "react-icons/md";
+import {Instagram, Linkedin} from "lucide-react";
 
 const Navbar = () => {
   const links = [
@@ -12,56 +14,43 @@ const Navbar = () => {
     },
 
     {
-      title: "Products",
+      title: "Works",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
+        <MdOutlineWorkHistory className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
       ),
-      href: "#",
+      href: "#works",
     },
     {
-      title: "Components",
+      title: "Contacts",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
+        <MdOutlinePeopleOutline className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
       ),
-      href: "#",
+      href: "#contacts",
     },
     {
-      title: "Aceternity UI",
+      title: "Linkedin",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <Linkedin className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
       ),
-      href: "#",
+      href: "https://linkedin.com/in/airlanggapradana",
     },
     {
-      title: "Changelog",
+      title: "Instagram",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
+        <Instagram className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
       ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
-      ),
-      href: "#",
+      href: "https://instagram.com/iamrangga._",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
       ),
-      href: "#",
+      href: "https://github.com/airlanggapradana",
     },
   ];
   return (
-    <div className={'fixed bottom-10 z-10'}>
+    <div className={'fixed bottom-5 z-10'}>
       <FloatingDock
         items={links}
       />

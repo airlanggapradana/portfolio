@@ -66,7 +66,7 @@ const Works = () => {
                 delay={150}
                 animateBy="words"
                 direction="bottom"
-                className="text-base md:text-xl text-gray-700 font-secondary max-w-xl"
+                className="text-base md:text-xl text-gray-700 font-secondary max-w-xl ml-5"
               />
             </div>
 
