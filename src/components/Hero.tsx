@@ -4,7 +4,7 @@ import {InteractiveHoverButton} from "@/components/magicui/interactive-hover-but
 
 const Hero = () => {
   return (
-    <div className={'w-full h-screen flex items-center justify-center'}>
+    <section id={'home'} className={'w-full h-screen flex items-center justify-center'}>
       <div className="absolute top-12 right-12 z-10">
         <InteractiveHoverButton
         >
@@ -12,9 +12,9 @@ const Hero = () => {
         </InteractiveHoverButton>
       </div>
       <div className={'w-full'}>
-        <div className={'max-w-8xl mx-auto'}>
+        <div className={'max-w-full mx-auto'}>
           <BlurText
-            text="Fullstack Developer & Self Learner"
+            text="Fullstack Web & Mobile Developer"
             delay={150}
             animateBy="words"
             direction="bottom"
@@ -31,7 +31,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
