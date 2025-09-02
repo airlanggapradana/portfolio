@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contactItems.map((contact) => (
             <AnimatedContent
-              distance={100}
+              distance={50}
               direction="vertical"
               reverse={false}
               duration={1.5}
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
               animateOpacity
               scale={1}
               threshold={0.2}
-              delay={0.5 * contact.id}
+              delay={0.2 * contact.id}
             >
               <a
                 key={contact.id}

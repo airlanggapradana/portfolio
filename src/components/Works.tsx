@@ -6,6 +6,8 @@ import compro from '../assets/compro.png'
 import oprec from '../assets/oprec.png'
 import React from "react";
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
+import sendthesong from "../assets/sendthesong.png"
+import docai from "../assets/doc_ai.png"
 
 interface WorkItem {
   id: number;
@@ -32,6 +34,22 @@ const workItems: WorkItem[] = [
     imageUrl: oprec,
     projectUrl: "https://oprec.fostiums.org",
     year: "2025"
+  },
+  {
+    id: 3,
+    title: "Send The Song Clone",
+    description: "A music sharing web application that allows users to send and share their favorite songs with friends.",
+    imageUrl: sendthesong,
+    projectUrl: "https://sendthesongclone.vercel.app",
+    year: "2024"
+  },
+  {
+    id: 4,
+    title: "Doc AI",
+    description: "an AI-powered web application to predict & check your health based on few simple questions.",
+    imageUrl: docai,
+    projectUrl: "https://halodoc-ai.vercel.app/",
+    year: "2024"
   },
 ];
 
@@ -117,7 +135,7 @@ const WorkCard: React.FC<{ work: WorkItem }> = ({work}) => {
         <img
           src={work.imageUrl}
           alt={work.title}
-          className="w-full h-[450px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          className="w-full h-[600px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"/>
         <div
