@@ -57,7 +57,7 @@ const workItems: WorkItem[] = [
     title: "Med Admin",
     description: "A web application to manage and track medication schedules, ensuring timely reminders and adherence to prescribed treatments.",
     imageUrl: medadmin,
-    projectUrl: "https://halodoc-ai.vercel.app/",
+    projectUrl: "https://med-admin-system-v1.vercel.app/",
     year: "2024"
   },
 ];
@@ -97,7 +97,7 @@ const Works = () => {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               {workItems.map((work, idx) => (
                 <AnimatedContent
                   key={work.id}
@@ -144,7 +144,7 @@ const WorkCard: React.FC<{ work: WorkItem }> = ({work}) => {
         <img
           src={work.imageUrl}
           alt={work.title}
-          className="w-full h-[600px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          className="w-full h-56 sm:h-80 md:h-[400px] lg:h-[600px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"/>
         <div
