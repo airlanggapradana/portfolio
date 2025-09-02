@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
             to={{opacity: 1, y: 0}}
             threshold={0.1}
             rootMargin="-100px"
-            textAlign="center"
+            textAlign="initial"
           />
           <SplitText
             text="Available for freelance projects, collaborations, and interesting conversations."

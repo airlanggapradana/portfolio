@@ -9,6 +9,19 @@
     --font-secondary: "Comic Neue", cursive;
 }
 
+@keyframes grow-vertical-line {
+    from {
+        height: 0;
+    }
+    to {
+        height: 2.5rem;
+    }
+}
+
+.animate-grow-vertical-line {
+    animation: grow-vertical-line 2s ease-in-out forwards;
+}
+
 html {
     scroll-behavior: smooth;
 }

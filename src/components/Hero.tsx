@@ -5,6 +5,18 @@ import SplitText from "@/components/reactbits/SplitText/SplitText.tsx";
 const Hero = () => {
   return (
     <section id={'home'} className={'w-full h-screen flex items-center justify-center'}>
+      <div className="absolute top-12 left-12 z-10">
+        <div className="flex items-center gap-3">
+          <div className="w-1 h-10 bg-gray-300 rounded animate-grow-vertical-line"/>
+          <BlurText
+            text="Airlangga Pradana"
+            delay={75}
+            animateBy="letters"
+            direction="bottom"
+            className={'text-3xl font-main font-bold text-gray-700'}
+          />
+        </div>
+      </div>
       <div className="absolute top-12 right-12 z-10">
         <InteractiveHoverButton
           onClick={() => {

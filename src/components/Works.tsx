@@ -8,6 +8,7 @@ import React from "react";
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
 import sendthesong from "../assets/sendthesong.png"
 import docai from "../assets/doc_ai.png"
+import medadmin from "../assets/med_admin.png"
 
 interface WorkItem {
   id: number;
@@ -48,6 +49,14 @@ const workItems: WorkItem[] = [
     title: "Doc AI",
     description: "an AI-powered web application to predict & check your health based on few simple questions.",
     imageUrl: docai,
+    projectUrl: "https://halodoc-ai.vercel.app/",
+    year: "2024"
+  },
+  {
+    id: 5,
+    title: "Med Admin",
+    description: "A web application to manage and track medication schedules, ensuring timely reminders and adherence to prescribed treatments.",
+    imageUrl: medadmin,
     projectUrl: "https://halodoc-ai.vercel.app/",
     year: "2024"
   },
@@ -101,7 +110,7 @@ const Works = () => {
                   animateOpacity
                   scale={1}
                   threshold={0}
-                  delay={0.5 + idx * 0.5}
+                  delay={0.25 + idx * 0.25}
                 >
                   <WorkCard work={work}/>
                 </AnimatedContent>
