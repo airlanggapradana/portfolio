@@ -10,7 +10,7 @@ const Hero = () => {
     >
       <div className="absolute top-6 left-4 sm:top-12 sm:left-12 z-10">
         <div className="flex flex-row items-center gap-2 sm:gap-3">
-          <div className="w-1 h-2 sm:h-8 sm:h-10 bg-gray-300 rounded animate-grow-vertical-line"/>
+          <div className="w-1 h-2 sm:h-8 bg-gray-300 rounded animate-grow-vertical-line"/>
           <BlurText
             text="Airlangga Pradana"
             delay={75}
