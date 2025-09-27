@@ -37,7 +37,7 @@ const contactItems: ContactItem[] = [
 
 const Contact: React.FC = () => {
   return (
-    <section id={'contacts'} className="py-20 px-4 sm:py-20 sm:px-6 w-full">
+    <section id={'contacts'} className="py-20 px-4 sm:px-6 lg:px-8 w-full">
       <div className='w-full'>
         <div className="max-w-full mx-auto">
           <div className="mb-10 sm:mb-16 flex flex-col items-start w-full">

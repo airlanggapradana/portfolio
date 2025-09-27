@@ -1,13 +1,24 @@
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
 import {InteractiveHoverButton} from "@/components/magicui/interactive-hover-button";
 import SplitText from "@/components/reactbits/SplitText/SplitText.tsx";
+import bg from '@/assets/bg_img.jpg'
 
 const Hero = () => {
   return (
     <section
       id={'home'}
-      className="w-full h-screen flex items-center justify-center px-4 relative"
+      className="w-full h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8"
     >
+      <div
+        className="absolute inset-0 w-full h-full z-0"
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-hidden="true"
+      />
       <div className="absolute top-6 left-4 sm:top-12 sm:left-12 z-10">
         <div className="flex flex-row items-center gap-2 sm:gap-3">
           <div className="w-1 h-2 sm:h-8 bg-gray-300 rounded animate-grow-vertical-line"/>
@@ -16,7 +27,7 @@ const Hero = () => {
             delay={75}
             animateBy="letters"
             direction="bottom"
-            className="text-lg sm:text-3xl font-main font-bold text-gray-700"
+            className="text-lg sm:text-3xl font-main font-bold text-gray-100"
           />
         </div>
       </div>
@@ -40,11 +51,11 @@ const Hero = () => {
             delay={150}
             animateBy="words"
             direction="bottom"
-            className="text-5xl max-w-5xl leading-tight md:text-8xl font-main font-medium mb-4"
+            className="text-5xl max-w-5xl leading-tight md:text-8xl font-main font-medium text-gray-100 mb-4"
           />
           <SplitText
             text="Hello! I am Airlangga Pradana, known as Rangga, a self-learner and a fullstack developer — Crafting seamless digital experiences that empower brands to connect, engage, and grow in a dynamic world."
-            className="text-lg md:text-2xl max-w-full sm:max-w-4xl text-gray-600 font-secondary"
+            className="text-lg md:text-2xl max-w-full sm:max-w-4xl text-gray-300 font-secondary"
             delay={100}
             duration={1}
             ease="power3.out"

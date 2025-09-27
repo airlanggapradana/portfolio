@@ -64,7 +64,8 @@ const workItems: WorkItem[] = [
 
 const Works = () => {
   return (
-    <section id={'works'} className={'w-full min-h-screen flex flex-col items-center justify-center'}>
+    <section id={'works'}
+             className={'w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'}>
       <Separator className={'bg-gray-300'}/>
       <div className={'w-full'}>
         <div className={'max-w-full mx-auto'}>
