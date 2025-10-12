@@ -6,8 +6,8 @@ import compro from '../assets/compro.png'
 import oprec from '../assets/oprec.png'
 import React from "react";
 import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
-import sendthesong from "../assets/sendthesong.png"
-import docai from "../assets/doc_ai.png"
+import fostifest from "../assets/fostifest.png"
+import uploadxam from "../assets/uploadxam.png"
 import medadmin from "../assets/med_admin.png"
 
 interface WorkItem {
@@ -38,19 +38,19 @@ const workItems: WorkItem[] = [
   },
   {
     id: 3,
-    title: "Send The Song Clone",
-    description: "A music sharing web application that allows users to send and share their favorite songs with friends.",
-    imageUrl: sendthesong,
-    projectUrl: "https://sendthesongclone.vercel.app",
-    year: "2024"
+    title: "FOSTIFEST 2025",
+    description: "A Web Event Application for Fostifest 2024, showcasing event details, schedules, and registration.",
+    imageUrl: fostifest,
+    projectUrl: "https://fostifest.fostiums.org",
+    year: "2025"
   },
   {
     id: 4,
-    title: "Doc AI",
-    description: "an AI-powered web application to predict & check your health based on few simple questions.",
-    imageUrl: docai,
-    projectUrl: "https://halodoc-ai.vercel.app/",
-    year: "2024"
+    title: "UploadXam",
+    description: "A Platform dedicated for Students from Fakultas Komunikasi dan Informatika (FKI) UMS to gather and share past exam questions for various subjects.",
+    imageUrl: uploadxam,
+    projectUrl: "https://uploadxam.fostiums.org",
+    year: "2025"
   },
   {
     id: 5,
