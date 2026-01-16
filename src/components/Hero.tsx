@@ -2,7 +2,7 @@ import BlurText from "@/components/reactbits/BlurText/BlurText.tsx";
 import {InteractiveHoverButton} from "@/components/magicui/interactive-hover-button";
 import SplitText from "@/components/reactbits/SplitText/SplitText.tsx";
 import bg from '@/assets/bg_img.jpg'
-import ava from '@/assets/avatar.jpg'
+import ava from '@/assets/avatar.webp'
 
 const Hero = () => {
   return (
@@ -26,7 +26,7 @@ const Hero = () => {
             delay={75}
             animateBy="letters"
             direction="bottom"
-            className="text-lg sm:text-3xl font-main font-bold text-gray-700 md:text-gray-100"
+            className="text-lg sm:text-3xl font-main font-bold text-gray-100 md:text-gray-100"
           />
         </div>
       </div>
@@ -50,11 +50,11 @@ const Hero = () => {
             delay={150}
             animateBy="words"
             direction="bottom"
-            className="text-5xl max-w-5xl leading-tight md:text-8xl font-main font-medium text-gray-700 md:text-gray-100 mb-4"
+            className="text-5xl max-w-5xl leading-tight md:text-8xl font-main font-medium text-gray-100 md:text-gray-100 mb-4"
           />
           <SplitText
             text="Hello! I am Airlangga Pradana, known as Rangga, a self-learner and a fullstack developer — Crafting seamless digital experiences that empower brands to connect, engage, and grow in a dynamic world."
-            className="text-lg md:text-2xl max-w-full sm:max-w-4xl text-gray-500 md:text-gray-300 font-secondary"
+            className="text-lg md:text-2xl max-w-full sm:max-w-4xl text-gray-300 md:text-gray-300 font-secondary"
             delay={100}
             duration={1}
             ease="power3.out"
